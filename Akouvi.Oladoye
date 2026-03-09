@@ -1,30 +1,31 @@
 class ItemToPurchase:
-  def __init_(self):
+  def __init__(self):
       self.item_name = "none"
       self.item_price = 0.0
-      self.item_quantitty = 0
+      self.item_quantity = 0
 
   def print_item_cost(self):
-      total_cost = int(self.item_name * self.item_quality)
+      total_cost = int(self.item_price * self.item_quantity)
       price = int(self.item_price)
-      price(f"{self.item_name} {self.item_quantity} @ ${price} = ${total_cost}")
+      print(f"{self.item_name} {self.item_quantity} @ ${price} = ${total_cost}")
 
 # Main Program item 1 and 2
 print("Item 1")
 item1 = ItemToPurchase()
 item1.item_name = input("Enter the item name:\n")
 item1.item_price = float(input("Enter the item price:\n"))
-item1.item_quality = int(input("Enter the item qauantity:\n"))
+item1.item_quantity = int(input("Enter the item quantity:\n"))
 
 print("\nItem 2")
 item2 = ItemToPurchase()
-item2.item_name = input("Enter the item name: \n")
+item2.item_name = input("Enter the item name:\n")
 item2.item_price = float(input("Enter the item price:\n"))
-item2.item_quanity = int(input("Enter the item quantity:\n"))
+item2.item_quantity = int(input("Enter the item quantity:\n"))
 
 # Calculate total cost
 total_cost = (item1.item_price * item1.item_quantity) + (item2.item_price * item2.item_quantity)
+
 print("\nTOTAL COST")
 item1.print_item_cost()
 item2.print_item_cost()
-print(f"\nTotal: ${int(total_Cost)}")
+print(f"\nTotal: ${int(total_cost)}")
