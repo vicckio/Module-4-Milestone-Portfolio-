@@ -1,4 +1,4 @@
-Class ItemToPurchase:
+class ItemToPurchase:
   def __init_(self):
       self.item_name = "none"
       self.item_price = 0.0
